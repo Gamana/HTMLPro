@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Basics</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #f3f7f3;
+            color: #26352c;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 20px;
+            background: #dcebdd;
+            border-bottom: 2px solid #8eaa91;
+        }
+
+        nav a {
+            margin-right: 14px;
+            color: #245c3b;
+        }
+
+        main {
+            width: 90%;
+            max-width: 850px;
+            margin: 24px auto;
+        }
+
+        section,
+        article,
+        aside {
+            margin: 18px 0;
+            padding: 18px;
+            border: 1px solid #c8d6c9;
+            background: #fff;
+        }
+
+        h1,
+        h2 {
+            color: #245c3b;
+        }
+
+        img {
+            width: 100%;
+            max-width: 500px;
+            border: 3px solid #dcebdd;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            border: 1px solid #b8c8ba;
+            text-align: left;
+        }
+
+        input,
+        textarea,
+        button {
+            margin: 5px 0;
+            padding: 8px;
+            font: inherit;
+        }
+
+        footer {
+            padding: 18px;
+            background: #dcebdd;
+            text-align: center;
+        }
+
+        .box-demo {
+            margin: 16px 0;
+            padding: 12px;
+            border: 2px dashed #a3b6a5;
+            background: #f7faf6;
+        }
+
+        .margin-layer {
+            margin: 12px;
+            padding: 12px;
+            border: 2px dashed #d78354;
+            background: #fff0e5;
+        }
+
+        .border-layer {
+            padding: 12px;
+            border: 6px solid #43805a;
+            background: #e8f1e8;
+        }
+
+        .padding-layer {
+            padding: 14px;
+            border: 1px dashed #718d75;
+            background: #d7e7d8;
+        }
+
+        .content-layer {
+            padding: 10px;
+            background: #f4d875;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header id="top">
+        <h1>A Simple HTML Page</h1>
+        <nav aria-label="Page navigation">
+            <a href="#text">Text</a>
+            <a href="#lists">Lists</a>
+            <a href="#table">Table</a>
+            <a href="#box-model">Box model</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="text">
+            <h2>Text and links</h2>
+            <p>HTML gives content its <strong>meaning</strong>. Text can be <em>emphasized</em>, <mark>highlighted</mark>, or written with H<sub>2</sub>O and x<sup>2</sup>.</p>
+            <p>Visit <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">the HTML reference</a> to learn more.</p>
+            <hr>
+            <blockquote>Good structure makes a page easier to read.</blockquote>
+            <small>This is an example of smaller text.</small>
+        </section>
+
+        <section id="lists">
+            <h2>Lists and an image</h2>
+            <article>
+                <h3>Things on a web page</h3>
+                <ul>
+                    <li>Headings and paragraphs</li>
+                    <li>Links and images</li>
+                    <li>Lists and forms</li>
+                </ul>
+                <ol>
+                    <li>Write HTML</li>
+                    <li>Add CSS</li>
+                    <li>Open the page</li>
+                </ol>
+            </article>
+            <figure>
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Electronic components on a green circuit board">
+                <figcaption>A figure can pair an image with a caption.</figcaption>
+            </figure>
+            <aside>
+                <p><abbr title="HyperText Markup Language">HTML</abbr> describes the content of this page.</p>
+            </aside>
+        </section>
+
+        <section id="table">
+            <h2>A small table</h2>
+            <table>
+                <caption>Web page building blocks</caption>
+                <thead>
+                    <tr><th>Technology</th><th>Purpose</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>HTML</td><td>Structure</td></tr>
+                    <tr><td>CSS</td><td>Style</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>A simple form</h2>
+            <form>
+                <label for="name">Your name</label><br>
+                <input id="name" name="name" type="text" placeholder="Name"><br>
+                <label for="message">Message</label><br>
+                <textarea id="message" name="message" rows="3"></textarea><br>
+                <button type="button">Send</button>
+            </form>
+        </section>
+
+        <section id="box-model">
+            <h2>The CSS box model</h2>
+            <p>Every element has content, padding, a border, and margin. The nested boxes below show each layer.</p>
+            <div class="box-demo">
+                <strong>Example area</strong>
+                <div class="margin-layer">Margin
+                    <div class="border-layer">Border
+                        <div class="padding-layer">Padding
+                            <div class="content-layer">Content</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p><code>box-sizing: border-box;</code> makes an element's padding and border part of its declared size.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Made with HTML and a little CSS.</p>
+        <a href="#top">Back to top</a>
+    </footer>
+</body>
+</html>
